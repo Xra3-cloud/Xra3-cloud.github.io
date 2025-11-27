@@ -1,40 +1,23 @@
-// Smooth scrolling already via CSS scroll-behavior
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
 
-// Rotate hero titles
-let titles = document.querySelectorAll('.rotating-titles span');
-let current = 0;
-titles[current].classList.add('active');
-setInterval(() => {
-  titles[current].classList.remove('active');
-  current = (current + 1) % titles.length;
-  titles[current].classList.add('active');
-}, 2000);
-
-// Animate skill bars and cards on scroll
-function revealElements() {
-  const skills = document.querySelectorAll('.skill-card');
-  const timeline = document.querySelectorAll('.timeline-item');
-  const trigger = window.innerHeight * 0.9;
-  
-  skills.forEach(skill => {
-    const top = skill.getBoundingClientRect().top;
-    if(top < trigger) {
-      skill.classList.add('active');
-      const fill = skill.querySelector('.skill-fill');
-      fill.style.width = fill.style.width || fill.getAttribute('style').replace('width:','');
+// Simple animation on scroll
+const cards = document.querySelectorAll('.card');
+const revealOnScroll = () => {
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
     }
   });
-  
-  timeline.forEach(item => {
-    const top = item.getBoundingClientRect().top;
-    if(top < trigger) item.classList.add('active');
-  });
-}
-window.addEventListener('scroll', revealElements);
-window.addEventListener('load', revealElements);
-
-// Dark mode toggle
-const toggle = document.getElementById('darkModeToggle');
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+};
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
