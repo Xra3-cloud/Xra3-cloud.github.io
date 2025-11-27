@@ -98,6 +98,16 @@ h2 { text-align: center; margin-bottom: 20px; color: #2c3e50; }
     transform: translateY(-10px);
   }
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text */
+  }
+  header.hero {
+    background-color: #2a2a2a; /* Slightly different dark background for the hero */
+    color: #f0f0f0;
+  }
+}
 
 #certifications ul {
   list-style: none;
