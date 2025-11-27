@@ -48,7 +48,15 @@ header {
   padding: 80px 20px;
 }
 
-h1 { font-size: 2.5em; margin: 0; }
+h1 h1 {
+  font-size: 2.5em;
+  margin: 0;
+  display: inline-block;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 p { font-size: 1.2em; }
 
 .btn {
