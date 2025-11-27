@@ -1,172 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prince Osei-Wusu | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link to external CSS -->
-  <link rel="stylesheet" href="assets/style.css">
 
-  <!-- Favicons (stored in assets folder) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="manifest" href="assets/site.webmanifest">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-
 
 <body>
 
-<!-- Navbar -->
-<nav>
-  <a href="#highlights">Highlights</a>
-  <a href="#projects">Projects</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#contactForm">Contact</a>
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contactForm">Contact</a>
+    <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+  </nav>
 
-  <!-- <button id="darkModeToggle">🌙</button> -->
-
-  <!-- Add Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Toggle button -->
-<button id="darkModeToggle"><i class="fas fa-moon"></i></button>
-
-</nav>
-
-<!-- Hero -->
-<header>
-  <div class="hero">
-    <!-- Profile image -->
-    <img src="assets/profile.jpg" alt="Prince Osei-Wusu" class="profile-pic">
-
-    <!-- Title with emojis -->
-    <h1>🌍 <span>Prince Osei-Wusu</span></h1>
-
-    <p>IT Auditor → Junior DevOps/Scrum Master | Secure Systems & Agile Delivery</p>
+  <!-- Hero -->
+  <header class="hero">
+    <img src="assets/profile.jpg" class="profile-pic" />
+    <h1><span>Prince Osei-Wusu</span></h1>
+    <p>IT Auditor • QA Engineer • Software Analyst • Scrum Master</p>
     <div class="cta">
       <a href="assets/prince_resume.pdf" class="btn">Download Resume</a>
       <a href="#projects" class="btn secondary">View Projects</a>
     </div>
-  </div>
-</header>
+  </header>
 
-
-
-
-<!-- Highlights -->
-<section id="highlights">
-  <h2>Highlights</h2>
-  <div class="cards">
-    <div class="card">📊 Automated CaseWare workflows – 30% faster reporting</div>
-    <div class="card">🧪 Excel/VBA audit templates – 40% faster onboarding</div>
-    <div class="card">📈 NHIS enrollment – 5,000+ citizens registered</div>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>CaseWare Coordinator – Ghana AIDS Commission</h3>
-      <p>Audit automation rollout, reporting user stories, resolving QC issues.</p>
-    </div>
-    <div class="card">
-      <h3>NHIS Enrollment & Health Screening</h3>
-      <p>Managed registration & logistics for 5,000+ citizens in Western Region.</p>
-    </div>
-    <div class="card">
-      <h3>IBES Survey – Ghana Statistical Service</h3>
-      <p>Facilitated structured data collection across districts, ensuring integrity.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Certifications -->
-<section id="certifications">
-  <h2>Certifications</h2>
-  <ul>
-    <li>Chartered Accountant (in progress)</li>
-    <li>Agile Project Management – Coursera</li>
-    <li>Cybersecurity Fundamentals</li>
-    <li>Scrum Master (planned)</li>
-    <li>AWS Cloud Practitioner (planned)</li>
-  </ul>
-</section>
-
-  <!-- Contact form heading -->
-<section id="contactheading">
-  <h2>Hit Me Up</h2>
-
-  <form id="contactForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required />
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required />
-
-  <label for="message">Message:</label>
-  <textarea id="message" name="message" required></textarea>
-
-  <button type="submit">Send</button>
-</form>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Dynamic and versatile IT & Audit professional with experience in audit technology,
+      cybersecurity fundamentals, QA automation, and software analysis. Skilled in
+      CaseWare automation, Agile/Scrum, internal controls, and process optimization.
+    </p>
   </section>
 
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="cards">
+      <div class="card"><strong>Audit & Accounting:</strong> CaseWare, Picas, QuickBooks, Excel</div>
+      <div class="card"><strong>Programming:</strong> Python, Java, JavaScript, React, HTML/CSS</div>
+      <div class="card"><strong>Cloud:</strong> AWS, Google Cloud, Oracle Cloud</div>
+      <div class="card"><strong>QA Automation:</strong> Selenium, TestNG, Maven</div>
+      <div class="card"><strong>Data Analysis:</strong> Power BI, Tableau, SQL, Pandas, NumPy</div>
+      <div class="card"><strong>Tools:</strong> Jira, Confluence, MS Project, Kanban</div>
+    </div>
+  </section>
 
-  // Your Firebase config
-  const firebaseConfig = {
-    apiKey: "AIzaSyCXGuxI303y1rSQyJnRsgTkNGIrvpqbmCk",
-    authDomain: "portfolio-contact-4edd1.firebaseapp.com",
-    projectId: "portfolio-contact-4edd1",
-    storageBucket: "portfolio-contact-4edd1.firebasestorage.app",
-    messagingSenderId: "659428762074",
-    appId: "1:659428762074:web:e6c8e35e8dda34f846e0e3",
-    measurementId: "G-EVF5EQP9Q2"
-  };
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Kwaku Nkrumah Consult (2024–2025)</h3>
+        <p>Senior Auditor & IT Manager — Led IT audits, assessed risks, strengthened cybersecurity, supervised teams, and managed cloud migrations.</p>
+      </div>
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+      <div class="card">
+        <h3>Kwaku Nkrumah Consult (2022–2024)</h3>
+        <p>IT Auditor — Planned and executed audit engagements, reviewed controls, documented findings, and supported automation through CaseWare.</p>
+      </div>
 
-  // Handle form submission
-  document.getElementById("contactForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
+      <div class="card">
+        <h3>Kwaku Nkrumah Consult (2020–2022)</h3>
+        <p>Audit Junior & IT Support — Monitored IT operations, supported audits, and resolved network and system issues.</p>
+      </div>
+    </div>
+  </section>
 
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const message = e.target.message.value;
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>CaseWare Coordinator</h3>
+        <p>Led automation for Ghana AIDS Commission & CSIR. Streamlined workflows and improved QC reporting.</p>
+      </div>
+      <div class="card">
+        <h3>NHIS & GIZ Health Screening</h3>
+        <p>Managed nationwide health screening logistics and trained medical personnel.</p>
+      </div>
+      <div class="card">
+        <h3>GSS IBES Survey</h3>
+        <p>Coordinated national data collection across districts, ensuring completeness and accuracy.</p>
+      </div>
+    </div>
+  </section>
 
-    try {
-      await addDoc(collection(db, "contacts"), {
-        name,
-        email,
-        message,
-        timestamp: serverTimestamp()
-      });
-      alert("Message sent successfully!");
-      e.target.reset();
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      alert("Something went wrong. Try again later.");
-    }
-  });
-</script>
+  <!-- Certifications -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Data Analytics — IBM</li>
+      <li>Agile Project Management — Google</li>
+      <li>CaseWare Working Papers — CaseWare Africa</li>
+      <li>Software QA — Board Infinity</li>
+    </ul>
+  </section>
 
+  <!-- Contact -->
+  <section id="contactheading">
+    <h2>Get in Touch</h2>
+    <form id="contactForm">
+      <label>Name:</label>
+      <input type="text" name="name" required />
 
-<!-- Footer -->
-<footer id="contact">
-  <p>📧 <a href="mailto:osewus2018@gmail.com">osewus2018@gmail.com</a> | 📍 Amasaman, Accra</p>
-  <p>
-    <a href="https://www.linkedin.com/in/prince-osei-wusu-004869146">LinkedIn</a> |
-    <a href="https://github.com/Xra3-cloud/Xra3-cloud.github.io">GitHub</a>
-  </p>
-</footer>
+      <label>Email:</label>
+      <input type="email" name="email" required />
 
-<!-- External JS (optional) -->
-<script src="assets/script.js"></script>
+      <label>Message:</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>📧 <a href="mailto:osewus2018@gmail.com">osewus2018@gmail.com</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/prince-osei-wusu-004869146">LinkedIn</a> |
+      <a href="https://github.com/Xra3-cloud">GitHub</a>
+    </p>
+  </footer>
+
+  <!-- JS (ES MODULE REQUIRED) -->
+  <script type="module" src="assets/script.js"></script>
+
 </body>
 </html>
