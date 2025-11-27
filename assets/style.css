@@ -1,10 +1,37 @@
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+  background-color: #f5f2e7; /* light coffee cream */
+  color: #3e2c23;           /* dark espresso text */
+  margin: 0;
+  padding: 0;
 }
+
+body.dark-mode {
+  background-color: #2b1d17; /* espresso black */
+  color: #f5f2e7;            /* cream text */
+}
+
+body.dark-mode form#contactForm {
+  background: #3e2c23;       /* mocha background */
+  color: #f5f2e7;
+}
+
+body.dark-mode form#contactForm input,
+body.dark-mode form#contactForm textarea {
+  background-color: #4b2e2e;
+  color: #f5f2e7;
+  border: 1px solid #a67c52;
+}
+
+body.dark-mode form#contactForm button {
+  background: #a67c52;       /* caramel brown */
+  color: #2b1d17;
+}
+
+body.dark-mode form#contactForm button:hover {
+  background: #d2a679;       /* lighter caramel */
+}
+
 
 .title-with-image {
   display: flex;
@@ -132,12 +159,12 @@ h2 { text-align: center; margin-bottom: 20px; color: #2c3e50; }
 }
 
 form#contactForm {
-  max-width: 600px;       /* wider form */
-  margin: 40px auto;      /* center it with spacing */
-  padding: 30px;          /* inner spacing */
-  background: #f9f9f9;    /* light background */
-  border-radius: 10px;    /* rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff8f0;      /* latte background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(62, 44, 35, 0.2);
 }
 
 form#contactForm label {
@@ -149,17 +176,18 @@ form#contactForm label {
 
 form#contactForm input,
 form#contactForm textarea {
-  width: 100%;            /* full width */
+  width: 100%;
   padding: 12px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #b08968; /* cappuccino border */
   border-radius: 6px;
   font-size: 16px;
+  background-color: #fff;
 }
 
 form#contactForm button {
-  background: #007bff;    /* blue button */
-  color: white;
+  background: #6f4e37;      /* coffee brown */
+  color: #fff;
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
@@ -168,7 +196,7 @@ form#contactForm button {
 }
 
 form#contactForm button:hover {
-  background: #0056b3;    /* darker blue on hover */
+  background: #4b2e2e;      /* darker roast */
 }
 
 
