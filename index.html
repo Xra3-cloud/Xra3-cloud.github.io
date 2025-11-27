@@ -86,6 +86,63 @@
   </ul>
 </section>
 
+  <form id="contactForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Send</button>
+</form>
+
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+  // Your Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyCXGuxI303y1rSQyJnRsgTkNGIrvpqbmCk",
+    authDomain: "portfolio-contact-4edd1.firebaseapp.com",
+    projectId: "portfolio-contact-4edd1",
+    storageBucket: "portfolio-contact-4edd1.firebasestorage.app",
+    messagingSenderId: "659428762074",
+    appId: "1:659428762074:web:e6c8e35e8dda34f846e0e3",
+    measurementId: "G-EVF5EQP9Q2"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Handle form submission
+  document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+
+    try {
+      await addDoc(collection(db, "contacts"), {
+        name,
+        email,
+        message,
+        timestamp: serverTimestamp()
+      });
+      alert("Message sent successfully!");
+      e.target.reset();
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Something went wrong. Try again later.");
+    }
+  });
+</script>
+
+
 <!-- Footer -->
 <footer id="contact">
   <p>📧 <a href="mailto:osewus2018@gmail.com">osewus2018@gmail.com</a> | 📍 Amasaman, Accra</p>
