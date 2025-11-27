@@ -131,6 +131,47 @@ h2 { text-align: center; margin-bottom: 20px; color: #2c3e50; }
   color: green;
 }
 
+form#contactForm {
+  max-width: 600px;       /* wider form */
+  margin: 40px auto;      /* center it with spacing */
+  padding: 30px;          /* inner spacing */
+  background: #f9f9f9;    /* light background */
+  border-radius: 10px;    /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+form#contactForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+form#contactForm input,
+form#contactForm textarea {
+  width: 100%;            /* full width */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form#contactForm button {
+  background: #007bff;    /* blue button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form#contactForm button:hover {
+  background: #0056b3;    /* darker blue on hover */
+}
+
+
 footer {
   background: #2c3e50;
   color: #fff;
