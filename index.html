@@ -9,12 +9,26 @@
 </head>
 <body>
 
-<!-- Header / Hero -->
-<header class="hero">
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="#hero">Home</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <button id="darkModeToggle">🌙</button>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="hero">
   <div class="hero-text">
     <h1>Prince Osei Wusu</h1>
-    <h2>QA Engineer • Data Analyst • Audit & Accounting • Scrum Master • Project Manager</h2>
-    <p class="summary">Multi-skilled professional across QA, Data Analytics, Audit & Accounting, and Project Management. Skilled in STLC, Power BI, Agile/Scrum, process improvement, and audit compliance.</p>
+    <h2 class="rotating-titles">
+      <span>QA Engineer</span>
+      <span>Data Analyst</span>
+      <span>Project Manager</span>
+    </h2>
+    <p>Multi-skilled professional across QA, Data Analytics, Audit & Accounting, and Project Management. Skilled in STLC, Power BI, Agile/Scrum, process improvement, and audit compliance.</p>
     <div class="buttons">
       <a href="#contact" class="btn primary">Contact Me</a>
       <a href="resume.pdf" class="btn secondary">Download CV</a>
@@ -29,13 +43,36 @@
 <section class="section" id="skills">
   <h3 class="section-title">Skills</h3>
   <div class="skills-grid">
-    <div class="skill-card" data-skill="QA Testing">QA Testing</div>
-    <div class="skill-card" data-skill="Automation">Automation</div>
-    <div class="skill-card" data-skill="Data Analytics">Data Analytics</div>
-    <div class="skill-card" data-skill="Excel / Power BI">Excel / Power BI</div>
-    <div class="skill-card" data-skill="Accounting & Audit">Accounting & Audit</div>
-    <div class="skill-card" data-skill="Project Management">Project Management</div>
-    <div class="skill-card" data-skill="SQL / Git / GitHub">SQL / Git / GitHub</div>
+    <div class="skill-card">
+      <img src="assets/icons/bug.svg" alt="QA Testing" class="skill-icon">
+      <p>QA Testing</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-card">
+      <img src="assets/icons/robot.svg" alt="Automation" class="skill-icon">
+      <p>Automation</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+    </div>
+    <div class="skill-card">
+      <img src="assets/icons/chart-bar.svg" alt="Data Analytics" class="skill-icon">
+      <p>Data Analytics</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill-card">
+      <img src="assets/icons/calculator.svg" alt="Accounting" class="skill-icon">
+      <p>Accounting & Audit</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+    </div>
+    <div class="skill-card">
+      <img src="assets/icons/tasks.svg" alt="Project Management" class="skill-icon">
+      <p>Project Management</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill-card">
+      <img src="assets/icons/database.svg" alt="SQL/Git" class="skill-icon">
+      <p>SQL / Git / GitHub</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+    </div>
   </div>
 </section>
 
@@ -49,7 +86,6 @@
       <ul>
         <li>Designed and executed test cases for applications.</li>
         <li>Performed regression, smoke, integration, and UAT testing.</li>
-        <li>Logged defects using Jira and improved testing workflows.</li>
       </ul>
     </div>
     <div class="timeline-item">
@@ -65,15 +101,6 @@
       <p class="company">Harriman – Food Distribution</p>
       <ul>
         <li>Performed end-to-end audit procedures and risk assessments.</li>
-        <li>Prepared audit reports and reviewed financial statements.</li>
-      </ul>
-    </div>
-    <div class="timeline-item">
-      <h4>Data / Accounting Assistant</h4>
-      <p class="company">EUSEG Mission Medical Center</p>
-      <ul>
-        <li>Managed QuickBooks entries, payroll, and bank reconciliations.</li>
-        <li>Built automated financial reports in Excel.</li>
       </ul>
     </div>
   </div>
@@ -101,11 +128,14 @@
 <!-- Contact Section -->
 <section class="section" id="contact">
   <h3 class="section-title">Contact Me</h3>
-  <p>Email: <a href="mailto:osewus2018@gmail.com">osewus2018@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/Xra3-cloud" target="_blank">github.com/Xra3-cloud</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/prince-osei-wusu-004869146" target="_blank">LinkedIn Profile</a></p>
+  <div class="contact-icons">
+    <a href="mailto:osewus2018@gmail.com"><img src="assets/icons/mail.svg" alt="Email"></a>
+    <a href="https://github.com/Xra3-cloud" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
+    <a href="https://www.linkedin.com/in/prince-osei-wusu-004869146" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+  </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>© 2025 Prince Osei Wusu</p>
 </footer>
