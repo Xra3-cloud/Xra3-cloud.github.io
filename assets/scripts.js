@@ -7,6 +7,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+document.getElementById("darkModeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
 
 // Simple animation on scroll
 const cards = document.querySelectorAll('.card');
